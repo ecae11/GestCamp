@@ -6,7 +6,7 @@ const showSidebar = () => {
   const html = template
     .evaluate()
     .setTitle('GestCamp')
-    .setSandboxMode(HtmlService.SandboxMode.NATIVE);
+    .setSandboxMode(HtmlService.SandboxMode.IFRAME);
   SpreadsheetApp.getUi().showSidebar(html);
 };
 

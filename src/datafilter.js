@@ -21,11 +21,11 @@ const getDataForEmail = () => {
     }
   });
 
-  const so = wb.getSheetByName('Clientes');
+  /*   const so = wb.getSheetByName('Clientes');
   so.getRange(`A1:${lastLetterColumn}${lastRow}`).clearContent();
   Logger.log(arr.length);
   Logger.log(arr[0].length);
-  so.getRange(`A1:${lastLetterColumn}${arr.length}`).setValues(arr);
+  so.getRange(`A1:${lastLetterColumn}${arr.length}`).setValues(arr); */
   return arr;
 };
 

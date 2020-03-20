@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ccbe8ed6-0810-4366-967d-1a2b973d237c" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="ccbe8ed6-0810-4366-967d-1a2b973d237c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,11 +19,21 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1ZJFOor3TCJ2PKND0BEjmXZ39Ts" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -28,24 +41,13 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\EACRUZ\Documents\GS\GestorCamp\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\EACRUZ\Documents\GS\GestorCamp\src" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -76,10 +78,33 @@
       <updated>1584549260539</updated>
       <workItem from="1584549262138" duration="2169000" />
       <workItem from="1584551745591" duration="24219000" />
+      <workItem from="1584717225868" duration="1253000" />
+      <workItem from="1584718559197" duration="271000" />
+      <workItem from="1584720844757" duration="362000" />
+      <workItem from="1584721223391" duration="155000" />
+      <workItem from="1584721559324" duration="44000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="550" y="182" width="800" height="677" key="#Updates" timestamp="1584721285142">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state x="550" y="182" width="800" height="677" key="#Updates/0.27.1920.988/1920.0.1360.768@0.27.1920.988" timestamp="1584721285142" />
+    <state x="697" y="391" width="515" height="257" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1584721204676">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state x="697" y="391" width="515" height="257" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.27.1920.988/1920.0.1360.768@0.27.1920.988" timestamp="1584721204676" />
+    <state x="704" y="263" width="501" height="513" key="FileChooserDialogImpl" timestamp="1584721201228">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state x="704" y="263" width="501" height="513" key="FileChooserDialogImpl/0.27.1920.988/1920.0.1360.768@0.27.1920.988" timestamp="1584721201228" />
+    <state x="449" y="155" key="SettingsEditor" timestamp="1584718478438">
+      <screen x="0" y="27" width="1920" height="988" />
+    </state>
+    <state x="449" y="155" key="SettingsEditor/0.27.1920.988/1920.0.1360.768@0.27.1920.988" timestamp="1584718478438" />
   </component>
 </project>
