@@ -296,7 +296,7 @@
 
     <script>
       var data = <?!= data ?>;
-      console.log(data);
+      // console.log(data);
 
       var apps;
       $(function () {
@@ -350,9 +350,8 @@
               //columnHidingEnabled: true,
               showBorders: true,
               editing: {
-                allowAdding: true,
+                mode: "form",
                 allowUpdating: true,
-                mode: "batch"
               },
               export: {
                 enabled: true,
@@ -365,6 +364,9 @@
               groupPanel: {
                 emptyPanelText: "Use the context menu of header columns to group data",
                 visible: true
+              },
+              scrolling: {
+                mode: "virtual"
               },
               pager: {
                 //allowedPageSizes: [5, 15, 30],
