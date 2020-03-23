@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ccbe8ed6-0810-4366-967d-1a2b973d237c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datafilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/datafilter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/html/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +41,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\EACRUZ\Documents\GS\GestorCamp\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
@@ -86,6 +87,7 @@
       <workItem from="1584802629139" duration="3550000" />
       <workItem from="1584818454307" duration="235000" />
       <workItem from="1584889119621" duration="1436000" />
+      <workItem from="1584974431729" duration="10286000" />
     </task>
     <servers />
   </component>
@@ -105,10 +107,11 @@
       <screen x="0" y="27" width="1920" height="988" />
     </state>
     <state x="704" y="263" width="501" height="513" key="FileChooserDialogImpl/0.27.1920.988/1920.0.1360.768@0.27.1920.988" timestamp="1584721201228" />
-    <state x="162" y="38" key="SettingsEditor" timestamp="1584803191755">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state x="238" y="38" key="SettingsEditor" timestamp="1584975495543">
+      <screen x="0" y="28" width="1366" height="740" />
     </state>
     <state x="162" y="38" key="SettingsEditor/0.27.1366.741@0.27.1366.741" timestamp="1584803191755" />
     <state x="449" y="155" key="SettingsEditor/0.27.1920.988/1920.0.1360.768@0.27.1920.988" timestamp="1584718478438" />
+    <state x="238" y="38" key="SettingsEditor/0.28.1366.740@0.28.1366.740" timestamp="1584975495543" />
   </component>
 </project>

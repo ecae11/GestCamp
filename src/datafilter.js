@@ -7,7 +7,7 @@ const getDataForEmail = () => {
   const ss = wb.getSheetByName('Data');
   const lastLetterColumn = columnToLetter(ss.getLastColumn());
   const lastRow = ss.getLastRow();
-  const dataSheet = ss.getRange(`A1:${lastLetterColumn}${lastRow}`).getValues();
+  const dataSheet = ss.getRange(`A1:${lastLetterColumn}${lastRow}`).getDisplayValues();
   const arr = [];
   // Logger.log(arr);
 

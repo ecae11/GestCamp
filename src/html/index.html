@@ -307,7 +307,9 @@
         apps = new Vue({
           el: '#app',
           data: {
-            registros: data
+            registros: data,
+            group1:[],
+            group2:[]
           },
 
           created: function () {
@@ -334,9 +336,22 @@
               this.registros[0].forEach((element, index2) => {
                 var obj = {};
                 obj['dataField'] = element;
-                obj['width'] = 130;
+                //obj['width'] = 130;
                 obj['caption'] = element;
+                if(element === 'ID' || element === 'EMAIL_USER' || index2>11){
+                  obj['visible'] = false;
+                }
+                if(element.toUpperCase().includes('FEC')){
+                  obj['dataType'] = "date";
+                }
+
                 //obj['sortable'] = true;
+                let au = element.toUpperCase().split("_");
+                if(element.toUpperCase().split("_")[0] === "CC"){
+                  this.group2.push(element)
+                }else {
+                  this.group1.push(element)
+                }
                 arr.push(obj);
               });
               //arr.push( { key: 'actions', label: 'Actions' });
@@ -349,10 +364,7 @@
               dataSource: this.dataObject,
               //columnHidingEnabled: true,
               showBorders: true,
-              editing: {
-                mode: "form",
-                allowUpdating: true,
-              },
+              keyExpr: "ID",
               export: {
                 enabled: true,
                 fileName: "Clientes"
@@ -365,9 +377,6 @@
                 emptyPanelText: "Use the context menu of header columns to group data",
                 visible: true
               },
-              scrolling: {
-                mode: "virtual"
-              },
               pager: {
                 //allowedPageSizes: [5, 15, 30],
                 showInfo: true,
@@ -378,9 +387,23 @@
               paging: {
                 pageSize: 10
               },
-              columnChooser: {
-                enabled: true,
-                mode: "select"
+              editing: {
+                mode: "form",
+                allowUpdating: true,
+                form: {
+                  items: [{
+                    itemType: "group",
+                    colCount: 2,
+                    colSpan: 2,
+                    items: this.group1
+                  }, {
+                    itemType: "group",
+                    colCount: 2,
+                    colSpan: 2,
+                    caption: "Home Address",
+                    items: this.group2
+                  }]
+                }
               },
               columns: this.fieldsObject
             });
