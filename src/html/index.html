@@ -191,6 +191,7 @@
 
   <!-- Load Vue followed by BootstrapVue -->
   <script src="//unpkg.com/vue@latest/dist/vue.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuXFo9u6AKQRoBjnH32R9ANaq4AnFgWzs&callback=iniciarMap"></script>
 <!--  <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
 
   &lt;!&ndash; Load the following for BootstrapVueIcons support &ndash;&gt;
@@ -206,12 +207,12 @@
             <img style="width: 150px;margin-left: 20px" class="responsive-img" src="https://www.cajapiura.pe/images/logo.png">
           </a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="#">{{email}}</a></li>
+            <li class="active"><a style="font-weight: bold" href="#">{{correo}}</a></li>
           </ul>
         </div>
       </nav>
 
-      <div class="row" style="margin-left: 20px">
+      <div v-show="verMapa" class="row" style="margin-left: 20px">
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
 
           <h5>Clientes Asignados</h5>
@@ -313,9 +314,12 @@
           </div>-->
         </main>
       </div>
+
+      <div v-show="!verMapa" id="map"></div>
+
       <div class="fixed-action-btn toolbar">
 
-        <a class="btn-floating yellow darken-3 btn-large pulse">
+        <a class="btn-floating yellow darken-3 btn-large pulse" @click="buttonFlot">
           <i class="material-icons large">location_on</i>
         </a>
 
@@ -349,7 +353,7 @@
 
     <script>
       var data = <?!= data ?>;
-      var email = <?!= correo ?>;
+      var correo = '<?!= email ?>';
       var apps;
       $(function () {
 
@@ -359,8 +363,9 @@
         apps = new Vue({
           el: '#app',
           data: {
+            verMapa:false,
             registros: data,
-            email: email,
+            email: correo,
             group1:[],
             group2:[]
           },
@@ -456,13 +461,7 @@
 
           },
           mounted() {
-            document.addEventListener('DOMContentLoaded', function () {
-              var elems = document.querySelectorAll('.fixed-action-btn');
-              var instances = M.FloatingActionButton.init(elems,{
-                toolbarEnabled: true
-              });
-            });
-
+            window.addEventListener('load',this.buttonFlot);
             $("#gridContainer").dxDataGrid({
               dataSource: this.dataObject,
               //columnHidingEnabled: true,
@@ -519,7 +518,31 @@
             });
           },
           methods: {
+            buttonFlot:function() {
+              this.verMapa = true;
 
+              if(navigator.geolocation){
+                navigator.geolocation.getCurrentPosition((data)=>{
+                  let currentPosition = {
+                    lat: data.coords.latitude,
+                    lng: data.coords.longitude
+                  };
+                  this.dibujarMapa(currentPosition)
+                })
+              }
+            },
+            dibujarMapa:function(obj) {
+              let map = new google.maps.Map(document.getElementById('map'),{
+                zoom: 4,
+                center: obj
+              });
+
+              let marker = new google.maps.Marker({
+                position: obj,
+                title: 'Tu ubicacion'
+              });
+              marker.setMap(map);
+            }
           }
         });
 

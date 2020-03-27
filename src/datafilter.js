@@ -11,14 +11,17 @@ const getDataForEmail = () => {
   const arr = [];
   // Logger.log(arr);
 
-  dataSheet.forEach(function(b, index) {
+  dataSheet.forEach((b, index) => {
     if (index === 0) {
       arr.push(b);
     }
-    if (b[0].trim() === email.trim()) {
-      // Logger.log(b);
-      arr.push(b);
-    }
+    dataSheet[0].forEach((a, index2) => {
+      if (a.toUpperCase() === 'EMAIL_USER') {
+        if (b[index2].trim() === email.trim()) {
+          arr.push(b);
+        }
+      }
+    });
   });
 
   /*   const so = wb.getSheetByName('Clientes');
