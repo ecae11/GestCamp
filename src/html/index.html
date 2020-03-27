@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Gestor Campañas2</title>
   <!-- Load required Bootstrap and BootstrapVue CSS -->
-  <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
+ <!-- <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap/dist/css/bootstrap.min.css" />
   <link type="text/css" rel="stylesheet" href="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.css" />
   <style>
     .bd-placeholder-img {
@@ -137,62 +137,84 @@
       border-color: transparent;
       box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
     }
-  </style>
+  </style>-->
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+  <style>
+    #data-grid-demo {
+      min-height: 700px;
+    }
+
+    .options {
+      margin-top: 20px;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+
+    .options .caption {
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .option {
+      margin-top: 10px;
+    }
+
+    .option > span {
+      width: 120px;
+      display: inline-block;
+    }
+
+    .option > .dx-widget {
+      display: inline-block;
+      vertical-align: middle;
+      width: 100%;
+      max-width: 350px;
+    }
+  </style>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write(decodeURIComponent('%3Cscript src="js/jquery.min.js"%3E%3C/script%3E'))</script>
   <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.common.css" />
   <link rel="stylesheet" type="text/css" href="https://cdn3.devexpress.com/jslib/19.2.6/css/dx.light.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.2/jszip.min.js"></script>
   <script src="https://cdn3.devexpress.com/jslib/19.2.6/js/dx.all.js"></script>
 
   <!-- Load polyfills to support older browsers -->
-  <script src="//polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver"
-    crossorigin="anonymous"></script>
+<!--  <script src="//polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver"
+    crossorigin="anonymous"></script>-->
 
   <!-- Load Vue followed by BootstrapVue -->
   <script src="//unpkg.com/vue@latest/dist/vue.min.js"></script>
-  <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
+<!--  <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue.min.js"></script>
 
-  <!-- Load the following for BootstrapVueIcons support -->
+  &lt;!&ndash; Load the following for BootstrapVueIcons support &ndash;&gt;
   <script src="//unpkg.com/bootstrap-vue@latest/dist/bootstrap-vue-icons.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>-->
 </head>
 
 <body>
+    <div id="app" class="">
+      <nav class="navbar-fixed light-blue darken-4">
+        <div class="nav-wrapper">
+          <a href="#" class="brand-logo">
+            <img style="width: 150px;margin-left: 20px" class="responsive-img" src="https://www.cajapiura.pe/images/logo.png">
+          </a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="#">{{email}}</a></li>
+          </ul>
+        </div>
+      </nav>
 
-  <body>
-    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Caja Piura</a>
-    </nav>
-
-    <div id="app" class="container-fluid">
-      <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-          <div class="sidebar-sticky">
-            <ul class="nav flex-column">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">
-                  <span data-feather="home"></span>
-                  Dashboard <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <span data-feather="file"></span>
-                  Otros
-                </a>
-              </li>
-            </ul>
-
-
-          </div>
-        </nav>
-
+      <div class="row" style="margin-left: 20px">
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
 
-          <h2>Clientes Asignados</h2>
+          <h5>Clientes Asignados</h5>
           <div class="dx-viewport">
             <div class="demo-container">
               <div id="gridContainer"></div>
@@ -291,23 +313,54 @@
           </div>-->
         </main>
       </div>
+      <div class="fixed-action-btn toolbar">
+
+        <a class="btn-floating yellow darken-3 btn-large pulse">
+          <i class="material-icons large">location_on</i>
+        </a>
+
+        <ul>
+          <li>
+            <a href="" class="btn-floating">
+              <i class="material-icons">colorize</i>
+            </a>
+          </li>
+          <li>
+            <a href="" class="btn-floating">
+              <i class="material-icons">content_cut</i>
+            </a>
+          </li>
+          <li>
+            <a href="" class="btn-floating">
+              <i class="material-icons">compare_arrows</i>
+            </a>
+          </li>
+          <li>
+            <a href="" class="btn-floating">
+              <i class="material-icons">content_paste</i>
+            </a>
+          </li>
+        </ul>
+
+      </div>
+
     </div>
 
 
     <script>
       var data = <?!= data ?>;
-      // console.log(data);
-
+      var email = <?!= correo ?>;
       var apps;
       $(function () {
 
-        Vue.use(BootstrapVue);
-        Vue.use(BootstrapVueIcons);
+        //Vue.use(BootstrapVue);
+        //Vue.use(BootstrapVueIcons);
 
         apps = new Vue({
           el: '#app',
           data: {
             registros: data,
+            email: email,
             group1:[],
             group2:[]
           },
@@ -322,12 +375,40 @@
                 if (index > 0) {
                   var protypeObj = {};
                   this.registros[0].forEach((element, index2) => {
-                    protypeObj[element] = element2[index2];
+                    if(element.toUpperCase().includes('FEC')){
+                      //Logger.log(element2[index2]);
+                      let _date = element2[index2];
+                      let delimiter = "/";
+                      if(_date !== "NULL" || _date !== null || _date !== "" ){
+                        let arr = _date.split("/");
+                        protypeObj[element] = _date;
+                        if(arr.length === 3){
+                          protypeObj[element] = arr[2]+"/"+arr[1]+"/"+arr[0];
+                        }
+                        //console.log("arr",arr);
+                        /*console.log(_date+"::"+delimiter);
+                        let formatLowerCase="dd/mm/yyyy".toLowerCase();
+                        let formatItems=formatLowerCase.split(delimiter);
+                        let dateItems=_date.split(delimiter);
+                        let monthIndex=formatItems.indexOf("mm");
+                        let dayIndex=formatItems.indexOf("dd");
+                        let yearIndex=formatItems.indexOf("yyyy");
+                        let month=parseInt(dateItems[monthIndex]);
+                        month-=1;
+                        protypeObj[element]= new Date(dateItems[yearIndex],month,dateItems[dayIndex]);*/
+
+                      }else{
+                        protypeObj[element] = null;
+                      }
+                    }else{
+                      protypeObj[element] = element2[index2];
+                    }
                   });
                   data.push(protypeObj)
                   //obj[element] = element2;
                 }
               });
+              //console.log("data",data);
               return data;
             },
             fieldsObject: function () {
@@ -336,9 +417,9 @@
               this.registros[0].forEach((element, index2) => {
                 var obj = {};
                 obj['dataField'] = element;
-                //obj['width'] = 130;
+                obj['width'] = 130;
                 obj['caption'] = element;
-                if(element === 'ID' || element === 'EMAIL_USER' || index2>11){
+                if(element === 'ID' || element === 'EMAIL_USER' || index2>10){
                   obj['visible'] = false;
                 }
                 if(element.toUpperCase().includes('FEC')){
@@ -356,10 +437,32 @@
               });
               //arr.push( { key: 'actions', label: 'Actions' });
               return arr;
+            },
+            stringToDate: function(_date,delimiter) {
+              if(_date !== null || _date !== ""){
+                console.log(_date+"::"+delimiter);
+                let formatLowerCase="dd/mm/yyyy".toLowerCase();
+                let formatItems=formatLowerCase.split(delimiter);
+                let dateItems=_date.split(delimiter);
+                let monthIndex=formatItems.indexOf("mm");
+                let dayIndex=formatItems.indexOf("dd");
+                let yearIndex=formatItems.indexOf("yyyy");
+                let month=parseInt(dateItems[monthIndex]);
+                month-=1;
+                return new Date(dateItems[yearIndex],month,dateItems[dayIndex]);
+              }
+             return null;
             }
 
           },
           mounted() {
+            document.addEventListener('DOMContentLoaded', function () {
+              var elems = document.querySelectorAll('.fixed-action-btn');
+              var instances = M.FloatingActionButton.init(elems,{
+                toolbarEnabled: true
+              });
+            });
+
             $("#gridContainer").dxDataGrid({
               dataSource: this.dataObject,
               //columnHidingEnabled: true,
@@ -373,8 +476,11 @@
                 contextMenuEnabled: true,
                 expandMode: "rowClick"
               },
-              groupPanel: {
+             /* groupPanel: {
                 emptyPanelText: "Use the context menu of header columns to group data",
+                visible: true
+              },*/
+              searchPanel: {
                 visible: true
               },
               pager: {
@@ -388,19 +494,23 @@
                 pageSize: 10
               },
               editing: {
+                //mode: "batch",
+                //allowUpdating: true,
+                //selectTextOnEditStart: true,
+               //startEditAction: "dblClick"
                 mode: "form",
                 allowUpdating: true,
                 form: {
                   items: [{
                     itemType: "group",
-                    colCount: 2,
-                    colSpan: 2,
+                    //colCount: 3,
+                    colSpan: 3,
                     items: this.group1
                   }, {
                     itemType: "group",
-                    colCount: 2,
-                    colSpan: 2,
-                    caption: "Home Address",
+                    //colCount: 2,
+                    //colSpan: 2,
+                    caption: "Respuesta de llamadas",
                     items: this.group2
                   }]
                 }

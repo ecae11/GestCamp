@@ -1,7 +1,10 @@
 import getDataForEmail from './datafilter';
+import getGmailAliasList from './alias';
 
 const doGet = () => {
+  const correo = getGmailAliasList()[0];
   const template = HtmlService.createTemplateFromFile('index');
+  template.email = correo;
   template.data = JSON.stringify(getDataForEmail());
   return template
     .evaluate()
